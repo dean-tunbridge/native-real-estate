@@ -14,7 +14,9 @@ export default function HomeScreen() {
           source={require('@/assets/images/partial-react-logo.png')}
           style={styles.reactLogo}
         />
-      }></ParallaxScrollView>
+      }>
+      <ThemedText type="title">Welcome to the new app </ThemedText>
+    </ParallaxScrollView>
   )
 }
 
