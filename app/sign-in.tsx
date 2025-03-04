@@ -10,6 +10,8 @@ import React from 'react'
 import images from '@/constants/images'
 
 const SignIn = () => {
+  const handleLogin = () => {}
+
   return (
     <SafeAreaView className="bg-white h-full">
       <ScrollView contentContainerClassName="h-full">
@@ -30,7 +32,7 @@ const SignIn = () => {
           <Text className="text-lg font-rubik text-black-200 text-center mt-12">
             Login to Real Estate with google
           </Text>
-          <TouchableOpacity></TouchableOpacity>
+          <TouchableOpacity onPress={handleLogin}></TouchableOpacity>
         </View>
       </ScrollView>
     </SafeAreaView>
