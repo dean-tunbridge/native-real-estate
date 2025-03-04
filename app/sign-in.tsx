@@ -8,6 +8,7 @@ import {
 } from 'react-native'
 import React from 'react'
 import images from '@/constants/images'
+import icons from '@/constants/icons'
 
 const SignIn = () => {
   const handleLogin = () => {}
@@ -32,7 +33,15 @@ const SignIn = () => {
           <Text className="text-lg font-rubik text-black-200 text-center mt-12">
             Login to Real Estate with google
           </Text>
-          <TouchableOpacity onPress={handleLogin}></TouchableOpacity>
+          <TouchableOpacity
+            onPress={handleLogin}
+            className="bg-white shadow-md shadow-zinc-300 rounded-full w-full">
+            <Image
+              src={icons.google}
+              className="w-5 h-5 "
+              resizeMode="contain"
+            />
+          </TouchableOpacity>
         </View>
       </ScrollView>
     </SafeAreaView>
