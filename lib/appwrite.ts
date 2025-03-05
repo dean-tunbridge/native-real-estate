@@ -1,6 +1,7 @@
 import { ActivityIndicatorBase } from 'react-native'
 import { Account, Avatars, Client, OAuthProvider } from 'react-native-appwrite'
 import * as Linking from 'expo-linking'
+import { openAuthSessionAsync } from 'expo-web-browser'
 
 export const config = {
   platform: 'com.real-estate',
@@ -25,6 +26,27 @@ export async function login() {
       OAuthProvider.Google,
       redirectUri
     )
+
+    if (!response) throw new Error('failed to login')
+
+    const browserResult = await openAuthSessionAsync(
+      response.toString(),
+      redirectUri
+    )
+
+    if (browserResult.type !== 'success') throw new Error('failed to login')
+
+    const url = new URL(browserResult.url)
+
+    const secret = url.searchParams.get('secret')?.toString()
+    const userId = url.searchParams.get('yserId')?.toString()
+
+    if (!secret || !userId) throw new Error('failed to login')
+
+    const session = await account.createSession(userId, secret)
+    if (!session) throw new Error('Failed to create session')
+
+    return true
   } catch (error) {
     console.error(error)
     return false
