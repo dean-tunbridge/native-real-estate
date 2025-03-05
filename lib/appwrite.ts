@@ -1,5 +1,5 @@
 import { ActivityIndicatorBase } from 'react-native'
-import { Account, Avatars, Client } from 'react-native-appwrite'
+import { Account, Avatars, Client, OAuthProvider } from 'react-native-appwrite'
 import * as Linking from 'expo-linking'
 
 export const config = {
@@ -20,6 +20,11 @@ export const account = new Account(client)
 export async function login() {
   try {
     const redirectUri = Linking.createURL('/')
+
+    const response = await account.createOAuth2Token(
+      OAuthProvider.Google,
+      redirectUri
+    )
   } catch (error) {
     console.error(error)
     return false
