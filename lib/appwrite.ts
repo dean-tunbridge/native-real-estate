@@ -70,7 +70,7 @@ export async function getUser() {
     if (response.$id) {
       const userAvatar = avatar.getInitials(response.name)
 
-      return response
+      return { ...response, avatar: userAvatar.toString() }
     }
   } catch (error) {
     console.error(error)
