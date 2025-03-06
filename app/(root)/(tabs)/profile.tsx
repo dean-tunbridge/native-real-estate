@@ -1,7 +1,7 @@
 import { View, Text, ScrollView, Image } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import icons from '@/constants/icons'
-import images from ''
+import images from '@/constants/images'
 
 const Profile = () => {
   const handleLogout = async () => {}
@@ -17,8 +17,8 @@ const Profile = () => {
         </View>
 
         <View className="flex flex-row justify-center mt-5">
-          <View className='flex flex-col items-center'>
-            <Image source={images.avatar}/>
+          <View className="flex flex-col items-center">
+            <Image source={images.avatar} />
           </View>
         </View>
       </ScrollView>
@@ -27,4 +27,3 @@ const Profile = () => {
 }
 
 export default Profile
- 
