@@ -9,9 +9,12 @@ import {
 import React from 'react'
 import images from '@/constants/images'
 import icons from '@/constants/icons'
+import { login } from '@/lib/appwrite'
 
 const SignIn = () => {
-  const handleLogin = () => {}
+  const handleLogin = async () => {
+    const result = await login()
+  }
 
   return (
     <SafeAreaView className="bg-white h-full">
