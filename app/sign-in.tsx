@@ -1,12 +1,12 @@
 import {
   View,
   Text,
-  SafeAreaView,
   ScrollView,
   Image,
   TouchableOpacity,
   Alert,
 } from 'react-native'
+import { SafeAreaView } from 'react-native-safe-area-context'
 import React from 'react'
 import images from '@/constants/images'
 import icons from '@/constants/icons'
