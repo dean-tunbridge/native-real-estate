@@ -1,4 +1,4 @@
-import { View, Text, ScrollView, Image } from 'react-native'
+import { View, Text, ScrollView, Image, TouchableOpacity } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import icons from '@/constants/icons'
 import images from '@/constants/images'
@@ -18,8 +18,18 @@ const Profile = () => {
 
         <View className="flex flex-row justify-center mt-5">
           <View className="flex flex-col items-center">
-            <Image source={images.avatar} />
+            <Image
+              source={images.avatar}
+              className="size-44 relative rounded-full"
+            />
+            <TouchableOpacity className="absolute bottom-11 right-2">
+              <Image source={icons.edit} className="size-9" />
+            </TouchableOpacity>
+            <Text className="text-2xl font-rubik-bold mt-2">
+              Lord Farquhard
+            </Text>
           </View>
+          <View className="flex flex-col mt-10"></View>
         </View>
       </ScrollView>
     </SafeAreaView>
