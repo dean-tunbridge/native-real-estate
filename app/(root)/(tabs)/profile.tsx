@@ -9,6 +9,7 @@ import {
 import { SafeAreaView } from 'react-native-safe-area-context'
 import icons from '@/constants/icons'
 import images from '@/constants/images'
+import { settings } from '@/constants/data'
 
 interface SettingsItemProp {
   icon: ImageSourcePropType
