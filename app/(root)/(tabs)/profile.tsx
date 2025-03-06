@@ -5,6 +5,7 @@ import {
   Image,
   TouchableOpacity,
   ImageSourcePropType,
+  Alert,
 } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import icons from '@/constants/icons'
@@ -48,10 +49,10 @@ const Profile = () => {
   const handleLogout = async () => {
     const result = await logout()
 
-    if(result) {
-      Alert.alert("Success", "You have logged out")
+    if (result) {
+      Alert.alert('Success', 'You have logged out')
     } else {
-      Alert.alert("Error", "An error occured while logging out")
+      Alert.alert('Error', 'An error occurred while logging out')
     }
   }
 
