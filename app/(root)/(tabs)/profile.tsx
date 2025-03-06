@@ -1,4 +1,11 @@
-import { View, Text, ScrollView, Image, TouchableOpacity } from 'react-native'
+import {
+  View,
+  Text,
+  ScrollView,
+  Image,
+  TouchableOpacity,
+  ImageSourcePropType,
+} from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import icons from '@/constants/icons'
 import images from '@/constants/images'
@@ -58,7 +65,11 @@ const Profile = () => {
               Lord Farquhard
             </Text>
           </View>
-          <View className="flex flex-col mt-10"></View>
+
+          <View className="flex flex-col mt-10">
+            <SettingsItem icon={icons.calendar} title={'My bookings'} />
+            <SettingsItem icon={icons.wallet} title={'Payments'} />
+          </View>
         </View>
       </ScrollView>
     </SafeAreaView>
