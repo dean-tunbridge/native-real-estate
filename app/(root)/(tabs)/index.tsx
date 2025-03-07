@@ -9,7 +9,10 @@ export default function Index() {
       <Text className="bg-white h-full">Home</Text>
       <View className="px-5">
         <View className="flex flex-row items-center">
-          <Image source={images.avatar} />
+          <Image source={images.avatar} className="size-12 rounded-full" />
+          <View className="flex flex-col items-start justify-center">
+            <Text>Goof Morning</Text>{' '}
+          </View>
         </View>
       </View>
     </SafeAreaView>
