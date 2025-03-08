@@ -11,7 +11,7 @@ export default function Index() {
         <View className="flex flex-row items-center">
           <Image source={images.avatar} className="size-12 rounded-full" />
           <View className="flex flex-col items-start justify-center">
-            <Text>Goof Morning</Text>{' '}
+            <Text>Good Morning</Text>{' '}
           </View>
         </View>
       </View>
