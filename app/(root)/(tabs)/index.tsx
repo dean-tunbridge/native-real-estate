@@ -1,5 +1,4 @@
 import images from '@/constants/images'
-import { Link } from 'expo-router'
 import { Text, View, Image } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
 
