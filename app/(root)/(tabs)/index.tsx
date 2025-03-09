@@ -1,4 +1,4 @@
-import { FeaturedCard } from '@/components/Cards'
+import { Card, FeaturedCard } from '@/components/Cards'
 import Search from '@/components/Search'
 import icons from '@/constants/icons'
 import images from '@/constants/images'
@@ -58,6 +58,38 @@ export default function Index() {
               }}
             />
           </View>
+        </View>
+        <View className="flex flex-row items-center justify-between">
+          <Text className="text-xl font-rubik-bold text-black-300">
+            Recommendations
+          </Text>
+          <TouchableOpacity>
+            <Text className="text-base font-rubik-bold text-primary-300">
+              See All
+            </Text>
+          </TouchableOpacity>
+        </View>
+        <View className="flex flex-row gap-5 mt-5">
+          <Card
+            item={{
+              $id: '',
+              $collectionId: '',
+              $databaseId: '',
+              $createdAt: '',
+              $updatedAt: '',
+              $permissions: [],
+            }}
+          />
+          <Card
+            item={{
+              $id: '',
+              $collectionId: '',
+              $databaseId: '',
+              $createdAt: '',
+              $updatedAt: '',
+              $permissions: [],
+            }}
+          />
         </View>
       </View>
     </SafeAreaView>
