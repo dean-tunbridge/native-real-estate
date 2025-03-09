@@ -1,3 +1,4 @@
+import { FeaturedCard } from '@/components/Cards'
 import Search from '@/components/Search'
 import icons from '@/constants/icons'
 import images from '@/constants/images'
@@ -34,6 +35,28 @@ export default function Index() {
                 See All
               </Text>
             </TouchableOpacity>
+          </View>
+          <View className="flex flex-row gap-5 mt-5">
+            <FeaturedCard
+              item={{
+                $id: '',
+                $collectionId: '',
+                $databaseId: '',
+                $createdAt: '',
+                $updatedAt: '',
+                $permissions: [],
+              }}
+            />
+            <FeaturedCard
+              item={{
+                $id: '',
+                $collectionId: '',
+                $databaseId: '',
+                $createdAt: '',
+                $updatedAt: '',
+                $permissions: [],
+              }}
+            />
           </View>
         </View>
       </View>
