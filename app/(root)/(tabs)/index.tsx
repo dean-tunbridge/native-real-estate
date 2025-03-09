@@ -1,6 +1,7 @@
+import Search from '@/components/Search'
 import icons from '@/constants/icons'
 import images from '@/constants/images'
-import { Text, View, Image } from 'react-native'
+import { Text, View, Image, TouchableOpacity } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
 
 export default function Index() {
@@ -19,6 +20,21 @@ export default function Index() {
             </Text>
           </View>
           <Image source={icons.bell} className="size-6" />
+        </View>
+
+        <Search />
+
+        <View className="px-5">
+          <View className="flex flex-row items-center justify-between">
+            <Text className="text-xl font-rubik-bold text-black-300">
+              Featured
+            </Text>
+            <TouchableOpacity>
+              <Text className="text-base font-rubik-bold text-primary-300">
+                See All
+              </Text>
+            </TouchableOpacity>
+          </View>
         </View>
       </View>
     </SafeAreaView>
