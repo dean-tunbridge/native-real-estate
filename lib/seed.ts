@@ -22,7 +22,7 @@ const propertyTypes = [
   'Studio',
   'Villa',
   'Apartment',
-  'Others',
+  'Other',
 ]
 
 const facilities = ['Laundry', 'Parking', 'Gym', 'Wifi', 'Pet-friendly']
