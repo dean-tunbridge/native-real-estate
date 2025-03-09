@@ -17,7 +17,7 @@ const Search = () => {
       <View className="flex-1 flex flex-row items-center justify-start z-50">
         <Image source={icons.search} className="size-5" />
         <TextInput
-          value={search}
+          value={search as string}
           onChangeText={handleSearch}
           placeholder="search for a new gaff"
           className="text-sm font-rubik text-black-300 ml-2 flex-1"></TextInput>
