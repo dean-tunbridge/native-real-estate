@@ -24,7 +24,7 @@ import { getLatestProperties, getProperties } from '@/lib/appwrite'
 
 // import seed from '@/lib/seed'
 
-const Home = () => {
+export default function Home() {
   const { user } = useGlobalContext()
 
   const params = useLocalSearchParams<{ query?: string; filter?: string }>()
@@ -155,5 +155,3 @@ const Home = () => {
     </SafeAreaView>
   )
 }
-
-export default Home
