@@ -20,7 +20,8 @@ const Search = () => {
           value={search as string}
           onChangeText={handleSearch}
           placeholder="search for a new gaff"
-          className="text-sm font-rubik text-black-300 ml-2 flex-1"></TextInput>
+          className="text-sm font-rubik text-black-300 ml-2 flex-1"
+        />
       </View>
     </View>
   )
