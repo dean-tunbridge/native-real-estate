@@ -37,7 +37,7 @@ const Auth = () => {
         }}>
         <Image
           source={images.onboarding}
-          className="w-full h-4"
+          className="w-full h-1/2"
           resizeMode="contain"
         />
 
