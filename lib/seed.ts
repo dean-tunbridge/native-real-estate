@@ -68,6 +68,7 @@ async function seed() {
         config.databaseId!,
         collectionId!
       )
+
       for (const doc of documents.documents) {
         await databases.deleteDocument(
           config.databaseId!,
